@@ -7,6 +7,7 @@ function MapBoxRoute(props: any) {
       type="geojson"
       data={{
         type: "Feature",
+        properties: {}, // Add empty properties object to fulfill the requirement
         geometry: { type: "LineString", coordinates: props.coordinates },
       }}
     >
