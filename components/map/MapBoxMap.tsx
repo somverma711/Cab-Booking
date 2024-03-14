@@ -25,7 +25,6 @@ function MapBoxMap() {
   );
   const { directionData, setDirectionData } = useContext(DirectionDataContext);
 
-
   //use to fly to sourccoordinate
   useEffect(() => {
     if (sourceCoordinates) {
@@ -45,8 +44,7 @@ function MapBoxMap() {
       });
     }
 
-    if(sourceCoordinates&&destinationCoordinates)
-    {
+    if (sourceCoordinates && destinationCoordinates) {
       getDirectionRoute();
     }
   }, [destinationCoordinates]);
@@ -71,9 +69,9 @@ function MapBoxMap() {
       }
     );
 
-    const result = await res.json()
-    console.log(result)
-    setDirectionData(result)
+    const result = await res.json();
+    console.log(result);
+    setDirectionData(result);
   };
 
   return (
@@ -93,9 +91,9 @@ function MapBoxMap() {
             style={{ width: "100%", height: 450, borderRadius: 10 }}
             mapStyle="mapbox://styles/mapbox/streets-v9"
           >
-            <Markers /> 
+            <Markers />
             {directionData?.routes ? (
-              <MapBoxRoute 
+              <MapBoxRoute
                 coordinates={directionData?.routes[0]?.geometry?.coordinates}
               />
             ) : null}
@@ -103,7 +101,7 @@ function MapBoxMap() {
         ) : null}
       </div>
       <div className="absolute bottom-[100px] z-20 right-[20px] hidden md:block">
-        <DistanceTime/>
+        <DistanceTime />
       </div>
     </div>
   );

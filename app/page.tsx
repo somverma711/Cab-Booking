@@ -1,6 +1,6 @@
 "use client"; // This is a client component
-import Booking from "@/components/Booking/Booking";
-import MapBoxMap from "@/components/Map/MapBoxMap";
+import Booking from "@/components/booking/Booking";
+import MapBoxMap from "@/components/map/MapBoxMap";
 import { DestinationCordiContext } from "@/context/DestinationCordiContext";
 import { DirectionDataContext } from "@/context/DirectionDataContext";
 import { SelectedCarAmountContext } from "@/context/SelectedCarAmountContext";

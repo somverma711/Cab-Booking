@@ -11,7 +11,7 @@ function Booking() {
   //     // Your other client-side code here
   //   }, []); // Empty dependency array ensures the effect runs only once after the initial render
   // const screenHeight = window.innerHeight * 0.72;
-  const {carAmount, setCarAmount}= useContext(SelectedCarAmountContext)
+  const { carAmount, setCarAmount } = useContext(SelectedCarAmountContext);
   const router: any = useRouter();
   return (
     <div className="p-5">
@@ -25,7 +25,7 @@ function Booking() {
             !carAmount ? "bg-gray-200" : null
           }`}
           // disabled={!carAmount}
-          onClick={()=> router.push('/payment')}
+          onClick={() => router.push("/payment")}
         >
           Book
         </button>
